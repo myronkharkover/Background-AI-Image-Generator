@@ -3,10 +3,10 @@ Used AWS' lambda functions and api to connect frontend to OpenAi's Dall-E text-t
 
 ## Here is a demo of demonstrating the connection from the AWS Lambda function I created to Open Ai's model to a local frontend I created
 
-https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/ef3a414e-3914-4d3a-8c3f-1decb367a729
+https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/ab25f6d1-9f2c-48fc-a535-8c2192d3383a
 
 ## Here is a demo on the live website
 
-https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/23fa9ef0-4c65-4348-a6ac-4fe880d969fc
+https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/a19d9ea4-5e45-4d50-ae75-55f6269e0dd0
 
 Additional demo of the functionality on the platform to be added soon
