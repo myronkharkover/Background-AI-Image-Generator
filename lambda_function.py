@@ -9,9 +9,9 @@ from io import BytesIO
 import requests
 
 cloudinary.config( 
-        cloud_name = "shulgirit", 
-        api_key = "925382853878793", 
-        api_secret = "_p6FZegjTfP3yGopqgiOZDwQKdc",
+        cloud_name = "XXXXXXXX", 
+        api_key = "XXXXXXXX", 
+        api_secret = "XXXXXXXXXXX",
         secure = True 
 )
 
@@ -51,9 +51,6 @@ def lambda_handler(event, context):
     
     # final image not compresed (about 3 MB)
     image_data = base64.b64decode(result)
-    
-    # delete all files with the same gameId that are in cloudinary to save space
-    # cloudinary.api.delete_resources(f'https://res.cloudinary.com/shulgirit/image/upload/wiply-platform/Dall-E-Image-Generator/{game_Id}_{time_generated}_result.png.jpg')
     
     # upload image to cloudinary to compress (compressing happens with fetch_format='auto')
     cloudinary.uploader.upload(image_data, public_id=f'{game_Id}_result', unique_filename=False, overwrite=True, invalidate=True, folder="wiply-platform/Dall-E-Image-Generator", fetch_format="auto")
