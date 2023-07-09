@@ -1,18 +1,12 @@
 # Dall-E-Image-Generator-for-WIply-Platform
-Used AWS' lambda functions and api to connect wiply.com's website and platfrom to OpenAi's Dall-E text-to-image model
+Used AWS' lambda functions and api to connect frontend to OpenAi's Dall-E text-to-image model
 
-To run a website that can test the functionality that I built, clone this repo into your preffered venv.
+# Here is a demo of demonstrating the connection from the AWS Lambda function I created to Open Ai's model to a local frontend I created
 
-Open a New Terninal and enter 'npm install' to install missing packages
+https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/ef3a414e-3914-4d3a-8c3f-1decb367a729
 
-```
-% npm install
-```
+# Here is a demo on the live website
 
-Then start a React App I created to run a webpage on your localhost where you can play with the functionality I created. To start it run the following command in your previously opened terminal after you have installed the necessary packages.
+https://github.com/myronkharkover/Background-AI-Image-Generator/assets/112825736/23fa9ef0-4c65-4348-a6ac-4fe880d969fc
 
-```
-% npm start
-```
-
-You should be able to experiment and play around with the Dall-E text-to-image model :D
+Additional demo of the functionality on the platform to be added soon
