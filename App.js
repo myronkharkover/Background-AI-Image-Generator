@@ -18,10 +18,10 @@ const App = () => {
 
 
     // Make an HTTP POST request to the Lambda function endpoint
-    axios.post('https://9g6hwsnbu4.execute-api.us-east-1.amazonaws.com/Dev/stableDiffusionMyronNOTBROKEN', requestBody, { headers })
+    axios.post('API-LINK-HERE-COVERED-FOR-SAFETY', requestBody, { headers })
     .then(response => {
       // Assuming the response data contains the CloudFront link for the image
-      const imageUrl = `https://d10bnmsvmjptwd.cloudfront.net/websiteTest2_${timestamp}_result.jpg`;
+      const imageUrl = `https://CLOUDFRONTPROTECTED.cloudfront.net/websiteTest2_${timestamp}_result.jpg`;
       setImageSrc(imageUrl);
     })  
     .catch(error => {
