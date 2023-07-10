@@ -39,7 +39,7 @@ def lambda_handler(event, context):
     result = response["data"][0]["b64_json"]
 
     # Specify the bucket and key
-    bucket = 'stablediffusionmyroncorrectregion'
+    bucket = 'myronDallEBucket'
     # / infront makes it a folder
     key = f'{game_Id}_{time_generated}_result.jpg'
 
@@ -59,13 +59,12 @@ def lambda_handler(event, context):
     print(srcURL)
 
     # pull image from cloudinary and transform it so it can be uploaded to se 3
-    # final_image = f'https://res.cloudinary.com/shulgirit/image/upload/wiply-platform/Dall-E-Image-Generator/{game_Id}_result.png.jpg'
     final_image = srcURL
     final_image_data = requests.get(final_image)
 
     # Upload the image data to S3
     try:
-        # Upload the image data to S3 (accessed via cloudfront link: https://d10bnmsvmjptwd.cloudfront.net/{game_Id}_{time_generated}_result.png)
+        # Upload the image data to S3 (accessed via cloudfront link: https://CLOUDFRONTPROTECTED.cloudfront.net/{game_Id}_{time_generated}_result.png)
         s3.put_object(Body=final_image_data.content, Bucket=bucket, Key=key)
     except NoCredentialsError:
         return {
@@ -86,7 +85,7 @@ def lambda_handler(event, context):
     # Return the image
     return {
         'statusCode': 200,
-        'body': json.dumps({'backgroundGeneratedImageURL': f'https://d10bnmsvmjptwd.cloudfront.net/{game_Id}_{time_generated}_result.jpg'}),
+        'body': json.dumps({'backgroundGeneratedImageURL': f'https://CLOUDFRONTPROTECTED.cloudfront.net/{game_Id}_{time_generated}_result.jpg'}),
         'headers': {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
